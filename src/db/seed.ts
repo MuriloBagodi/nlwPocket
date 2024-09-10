@@ -1,5 +1,5 @@
 // Arquivo no qual vai popular o banco de dados de forma lúdica
-import { db } from '.'
+import { db, client } from '.'
 import { goalCompletions, goals } from './schema'
 
 async function seed() {
@@ -22,4 +22,6 @@ async function seed() {
   ])
 }
 
-seed()
+seed().finally(() => {
+  client.end()
+})

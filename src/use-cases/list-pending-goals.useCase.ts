@@ -3,7 +3,6 @@ import weekOfYear from 'dayjs/plugin/weekOfYear'
 import { db } from '../db'
 import { goalCompletions, goals } from '../db/schema'
 import { and, count, gte, lte, eq, sql } from 'drizzle-orm'
-import { number } from 'zod'
 
 dayjs.extend(weekOfYear)
 
